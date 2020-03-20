@@ -2,9 +2,18 @@
 title: Első lecke
 ---
 
-# Miért jó, ha egy tanár tud programozni?
+# Miért tanuljon meg egy tanár programozni?
 
-## De mégis, mit fogok megtanulni?
+Amikor egy gimnáziumban fizikát tanítottam, nagy segítségemre volt a programozási tudásom. Első órámon a harmonikus rezgőmozgást tanítottam. A harmonikus rezgőmozgást a körmozgásból vezetjük le. Úgy éreztem, hogy a kettő közötti kapcsolatot az osztály egy része nem igazán értette meg, ezért következő órára csináltam nekik ezt:
+
+<iframe src="https://harmonikus.netlify.com/" width="620" height="620"></iframe>
+
+Ez a szimuláció sokat segített nekik, hogy intuitív módon megértsék a kapcsolatot.
+A tudásukat is fel tudtam mérni, ki kellett találniuk, melyik csúszka az amplitudó, melyik a szögsebesség, illetve megértették, hogy mi a kapcsolat az amplitúdó, a szögsebesség, frekvencia, periódusidő és a kerületi sebesség között.
+
+Sajnos, sokszor a diákok bemagolják a képleteket anélkül, hogy megértenék, mit is jelentenek ezek az összefüggések. A megértésben sokat segíthetnek az ilyen szimulációk.
+
+## Mit fogunk tanulni
 
 # Koordináták a képernyőn
 
@@ -77,6 +86,21 @@ line(x1, y1, x2, y2);
 ```
 
 ahol x1 és y1 a kezdő-, x2 és y2 pedig a végpont koordinátái.
+{% include task.html content="(⭐) Fejezd be a házat az alábbi programban!" %}
+
+<script type="text/p5" data-p5-version="1.0.0" data-preview-width="200">
+function setup() {
+  createCanvas(200, 200);
+}
+
+function draw() {
+  background("lightblue");
+  line(50,50,50,150);
+  line(150,50,150,150);
+  line(50,150,150,150);
+  line(50,50,100,0);
+}
+</script>
 
 # Végső megmérettetés: rajzolj hóembert!
 
@@ -90,6 +114,8 @@ A hóember:
 - Talajon álljon (legyen alatta egy vonal)
 - Légy kreatív! ;)
 
+Haladj apróbb lépésekben! A kész kód eredményét minden kisebb lépés után ellenőrizd a Play gomb megnyomásával - így könnyebb időben észrevenni a hibákat. Sok sikert! ;)
+
 <script type="text/p5" data-p5-version="1.0.0" data-preview-width="300" data-height="600">
 function setup() {
   createCanvas(300, 400);
@@ -99,5 +125,3 @@ function draw() {
   background("red");
 }
 </script>
-
-Haladj apróbb lépésekben! A kész kód eredményét minden kisebb lépés után ellenőrizd a Play gomb megnyomásával - így könnyebb időben észrevenni a hibákat. Sok sikert! ;)
