@@ -1,0 +1,64 @@
+<script>
+  const oX = 30;
+  const oY = 30;
+  function setup() {
+    createCanvas(600, 400);
+    fill("black");
+  }
+
+  function draw() {
+    background(245);
+    // Hint text
+    textSize(18);
+    fill(200);
+    noStroke();
+    text("Mozgasd itt az egeret!", 200, 200);
+    // x axis
+    textSize(18);
+    fill("red");
+    stroke("red");
+    drawArrow(oX, oY, width - oX, oY);
+    noStroke();
+    text("x", oX + 150, oY - 10);
+
+    // y axis
+    fill("blue");
+    stroke("blue");
+    drawArrow(oX, oY, oX, height - oY);
+    noStroke();
+    text("y", oX - 20, oY + 150);
+
+    // Origo
+    textSize(18);
+    stroke("black");
+    fill("black");
+    circle(oX, oY, 8);
+    noStroke();
+    text("(0,0)", oX - 25, oY - 10);
+
+    // Current position
+    if (mouseX > oX && mouseY > oY) {
+      textSize(24);
+      fill("green");
+      let dX = mouseX - oX;
+      let dY = mouseY - oY;
+      circle(mouseX, mouseY, 10);
+      text("(" + dX + ", " + dY + ")", mouseX + 10, mouseY + 20);
+    }
+  }
+
+  function drawArrow(fromX, fromY, toX, toY) {
+    let from = createVector(fromX, fromY);
+    let to = createVector(toX, toY);
+    let arrow = createVector(toX - fromX, toY - fromY);
+    push();
+    strokeWeight(3);
+    translate(from.x, from.y);
+    line(0, 0, arrow.x, arrow.y);
+    rotate(arrow.heading());
+    let arrowSize = 7;
+    translate(arrow.mag() - arrowSize, 0);
+    triangle(0, arrowSize / 2, 0, -arrowSize / 2, arrowSize, 0);
+    pop();
+  }
+</script>
