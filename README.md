@@ -6,4 +6,4 @@
 
 # Koordináta-rendszer
 
-{% include coordinates.html %}
+{% include iframe.html %}
