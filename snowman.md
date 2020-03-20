@@ -33,10 +33,13 @@ function draw() {
 
 Ha minden jól megy, egy fehér kört látsz világoszöld háttér előtt. Nézzük meg, hogyan működik ez a program:
 
-- Két "függvényt" (a programozásban ez kicsit mást jelent, mint a matekban) hoztunk létre, a `setup` és a `draw` függvényeket.
-- Amikor a play gombra kattintottál, a p5 először lefuttatja a `setup` függvényt. Ez egyetlen utasítást tartalmaz: a `createCanvas(200,200);` létrehoz egy 200 pixel szélességű és 200 pixel hosszúságú "vásznat", erre fog a program a továbbiakban rajzolni.
-- A `setup` függvény után a `draw` függvény fut le. Itt két utasítás van: Az első az egész hátteret beszínezi világoszöld színre. A második utasítás egy kört rajzol a megadott paraméterek alapján. Kört a `circle(x, y, d);` paranccsal rajzolhatunk, ahol `x` és `y` a kör középpontjának koordinátái, `d` pedig a kör átmérője.
-  A `draw` függvényben megadott parancsok nem csak egyszer futnak le, hanem másodpercenként 60-szor. (Ebben a leckében ennek nincs jelentősége, mert statikus rajzokat készítünk.)
+- Két "függvényt" (a programozásban ez kicsit mást jelent, mint a matekban) hoztunk létre, a **setup** és a **draw** függvényeket.
+- Amikor a play gombra kattintottál, a p5 először lefuttatja a **setup** (_telepítés_) függvényt. Ez egyetlen utasítást tartalmaz: a `createCanvas(200,200);` létrehoz egy 200 pixel szélességű és 200 pixel hosszúságú "vásznat", erre fog a program a továbbiakban rajzolni.
+- A _setup_ függvény után a **draw** függvény fut le. Itt két utasítás van:
+  - Az első, a `background("lightgreen")` az egész hátteret beszínezi világoszöld színre.
+  - A második utasítás egy kört rajzol a megadott paraméterek alapján. Kört a `circle(x, y, d);` paranccsal rajzolhatunk, ahol `x` és `y` a kör középpontjának koordinátái, `d` pedig a kör átmérője.
+
+A `draw` függvényben megadott parancsok nem csak egyszer futnak le, hanem másodpercenként 60-szor. (Ebben a leckében ennek nincs jelentősége, mert statikus rajzokat készítünk.)
 
 {% include task.html content="Változtasd meg a fenti programot úgy, hogy nagyobb kört rajzoljon. Ha átírtad a megfelelő utasítást, ismét kattints a Play gombra!" %}
 
