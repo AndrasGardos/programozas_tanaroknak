@@ -1,4 +1,8 @@
-<% include p5libs.html %>
+---
+title: Első lecke
+---
+
+{% include p5libs.html %}
 
 # Miért jó, ha egy tanár tud programozni?
 
@@ -6,7 +10,7 @@
 
 # Koordináták
 
-<iframe width="600" height="400" src="demos/coordinates.html"></src>
+<iframe width="600" height="400" src="demos/coordinates.html"></iframe>
 
 # Rajzoljunk!
 
