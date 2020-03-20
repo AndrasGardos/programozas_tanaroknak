@@ -6,11 +6,17 @@ title: Első lecke
 
 ## De mégis, mit fogok megtanulni?
 
-# Koordináták
+# Koordináták a képernyőn
+
+A számítógépes grafikában egy kicsit más koordinátarendszert használunk, mint a matekórákon. A régi számítógépek csak szöveget tudtak megjeleníteni, így sorokban és oszlopokban "gondolkodtak".
+
+Ezért a koordinátarendszer origója a bal-felső sarokban van, az x értéke balról jobbra nő (pont mint matekórán), viszont **az y értéke lefelé nő**. Ez elsőre talán furcsa lesz, de könnyen meg lehet szokni. Vidd az egeret a szürke terület felé, és figyeld meg hogyan változnak a koordináták.
 
 <iframe width="620" height="420" src="demos/coordinates.html"></iframe>
 
 # Rajzoljunk!
+
+## Körözz!
 
 Kattints a play gombra! Ezzel lefuttatjuk a baloldalon látható programot.
 
@@ -34,7 +40,7 @@ Ha minden jól megy, egy fehér kört látsz világoszöld háttér előtt. Néz
 
 {% include task.html content="Változtasd meg a fenti programot úgy, hogy nagyobb kört rajzoljon. Ha átírtad a megfelelő utasítást, ismét kattints a Play gombra!" %}
 
-### Színezzünk
+## Színezzünk
 
 A `fill` utasítással a kitöltőszínt változtathatjuk meg. A kitöltőszín megmarad, amíg ismét meg nem változtatjuk.
 Például rajzolhatunk egy francia kokárdát:
@@ -59,7 +65,7 @@ function draw() {
 
 {% include question.html content="Miért fontos, hogy pont ebben a sorrendben legyenek az utasítások? Mi történne, ha megváltoztatnánk? Próbáld ki!" %}
 
-# Rajzolj vonalat
+## Rajzolj vonalat
 
 Vonalat rajzolhatunk a `line` utasítással:
 
@@ -69,7 +75,17 @@ line(x1, y1, x2, y2);
 
 ahol x1 és y1 a kezdő-, x2 és y2 pedig a végpont koordinátái.
 
-# Végső megmérettetés: rajzoljuk hóembert!
+# Végső megmérettetés: rajzolj hóembert!
+
+{% include homework.html content="Módosítsd az alábbi kódot úgy, hogy az egy hóembert rajzoljon. A megoldásról (kód + eredménye) készíts screenshotot, és töltsd fel a Google Classroomba! " %}
+
+A hóember:
+
+- Világos vagy sötétkék háttér
+- Legalább 3, különböző nagyságú körből álljon
+- Legyen legalább egy kör más színű, mint a többiek
+- Talajon álljon (legyen alatta egy vonal)
+- Légy kreatív! ;)
 
 <script type="text/p5" data-p5-version="1.0.0" data-preview-width="300" data-height="600">
 function setup() {
@@ -81,15 +97,4 @@ function draw() {
 }
 </script>
 
-Módosítsd a fenti kódot úgy, hogy az egy hóembert rajzoljon. Ez a hóember:
-
-- Világos vagy sötétkék háttér előtt
-- Legalább 3, különböző nagyságú körből álljon
-- Legyen legalább egy kör más színű, mint a többiek
-- Talajon álljon (legyen alatta egy vonal)
-- Lehetsz kreatív! ;)
-
-Haladj apróbb lépésekben, a kész kód eredményét minden kisebb lépés után ellenőrizd a Play gomb megnyomásával - így könnyebb észrevenni a hibákat.
-{% include homework.html content="
-Rajzolj hóembert a fentiek alapján! A megoldásról (kód + eredménye) készítsetek screenshotot, és töltsétek fel a Google Classroomba! Sok sikert! ;)
-" %}
+Haladj apróbb lépésekben! A kész kód eredményét minden kisebb lépés után ellenőrizd a Play gomb megnyomásával - így könnyebb időben észrevenni a hibákat. Sok sikert! ;)
