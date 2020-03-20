@@ -74,7 +74,7 @@ function draw() {
 </script>
 
 {% include task.html content="Változtasd meg a fenti programot úgy, hogy magyar kokárdát rajzoljon!" %}
-
+A `fill` és a `background` parancsok [ezeknek a színeknek](https://www.w3schools.com/colors/colors_names.asp) a neveit tudják.
 {% include question.html content="Miért fontos, hogy pont ebben a sorrendben legyenek az utasítások? Mi történne, ha megváltoztatnánk? Próbáld ki!" %}
 
 ## Rajzolj vonalat
