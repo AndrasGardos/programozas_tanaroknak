@@ -1,5 +1,5 @@
 ---
-title: Kosárlabda-animálás!
+title: Kosárlabdázzunk I.
 ---
 
 Az előző leckében megtanultuk, hogyan rajzoljunk kört és vonalat. A **draw** függvény, amiben ezeket meghívtuk, nem egyszer futott le, hanem másodpercenként 60-szor. Itt az ideje, hogy ezt kihasználjuk: animáljunk egy kosárlabdát!
@@ -66,7 +66,7 @@ if (feltétel) {
 }
 ```
 
-Tehát a fenti példában minden képkockánál meg kell vizsgálnunk, hogy kiment-e a kör a jobb szélen, és ha igen, akkor vissza kell tennünk az elejére:
+A fenti példában minden képkockánál meg kell vizsgálnunk, hogy kiment-e a kör a jobb szélen, és ha igen, akkor vissza kell tennünk az elejére:
 
 <script type="text/p5" data-p5-version="1.0.0" data-preview-width="200">
 let x = 10;
@@ -79,6 +79,7 @@ function setup() {
 function draw() {
   background("lightgreen");
   x = x + v;
+  // ha kiment a jobb szélen
   if(x>200){
       x = 10;
   }
@@ -118,7 +119,38 @@ function draw() {
 }
 </script>
 
-ITT ÚJ LECKE
+# (🌟) A "feltétel"-ekről
+
+A feltétel egy kifejezést, ami igaz, vagy hamis értéket ad. Például:
+
+```javascript
+let a = 7;
+let b = 9;
+let c = 7;
+let d = true; // igaz
+
+a < b; // Igaz
+a > b; // Hamis
+a == c; // Igaz, a egyenlő c-vel
+a === c; // Igaz, a egyenlő c-vel, és mindketten számok 🌟
+a >= c; // Igaz, a nagyobb-vagy-egyenlő c-nél
+a <= b; // Igaz, a kisebb-vagy-egyenlő b-nél
+d; // d igaz
+```
+
+Vigyázz, a szimpla `=` jelentése javascriptben a "legyen egyenlő"!
+
+\_ 🌟 A teljesség kedvéért: kétféle összehasonlítás van, a `==` és a `===`.
+
+A változók nem csak számok lehetnek, hanem például karakterláncok is, például `let koszones = "Jó napot!"`. Ez nyilván nem egyenlő 2-vel. De a "2" (mint szöveg) egyenlő a 2 számmal? \_
+
+```javascript
+let k = "2";
+k == 2; // Igaz
+k === 2; // Nem igaz
+```
+
+# Szabadesés
 
 szabadesés - rugalmatlanul ütközik
 e.v.e.m és a szabadesés kombinálása

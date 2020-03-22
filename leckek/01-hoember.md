@@ -15,6 +15,10 @@ Sajnos, sokszor a diákok bemagolják a képleteket anélkül, hogy megértenék
 
 ## Mit fogunk tanulni
 
+Gyakorlati példákon keresztül tanuljuk meg a programozás alapjait. A javascript nyelvet fogjuk használni: ez az a nyelv, ami a böngészőkben a weblapokat interaktívvá teszi, szinte minden weblap használja. A javascript nyelvvel készült szimulációk nagy előnye, hogy gyakorlatilag bármilyen eszközön használhatók, amivel internetezni lehet.
+
+A javascripten mellett a **p5.js** könyvtárat fogjuk használni. A _p5.js_ könyvtár célja, hogy a webes interaktív animációk, szimulációk készítését minél egyszerűbbé tegye mindenkinek.
+
 # Koordináták a képernyőn
 
 A számítógépes grafikában egy kicsit más koordinátarendszert használunk, mint a matekórákon. A régi számítógépek csak szöveget tudtak megjeleníteni, így sorokban és oszlopokban "gondolkodtak".
@@ -23,9 +27,9 @@ Ezért a koordinátarendszer origója a bal-felső sarokban van, az x értéke b
 
 <iframe width="620" height="420" src="demos/coordinates.html"></iframe>
 
-# Rajzoljunk!
+# Rajzolj programozva
 
-## Körözz!
+## Körök
 
 Kattints a play gombra! Ezzel lefuttatjuk a baloldalon látható programot.
 
@@ -89,7 +93,7 @@ line(x1, y1, x2, y2);
 
 ahol x1 és y1 a kezdő-, x2 és y2 pedig a végpont koordinátái.
 
-{% include task.html content="(⭐) Fejezd be a házat az alábbi programban!" %}
+{% include task.html content="Fejezd be a házat az alábbi programban!" %}
 
 <script type="text/p5" data-p5-version="1.0.0" data-preview-width="200">
 function setup() {
@@ -111,13 +115,15 @@ function draw() {
 
 A hóember:
 
-- Világos-- vagy sötétkék háttér
+- Világos- vagy sötétkék háttér
 - Legalább 3, különböző nagyságú körből álljon
 - Legyen legalább egy kör más színű, mint a többiek
 - Talajon álljon (legyen alatta egy vonal)
 - Engedd szabadjára kreativitásod! ;)
 
 Haladj apróbb lépésekben! A kész kód eredményét minden kisebb lépés után ellenőrizd a Play gomb megnyomásával - így könnyebb időben észrevenni a hibákat. Sok sikert! ;)
+
+_ A legjobb, legkreatívabb megoldásokat megosztanám a többiekkel is. Ha nem szeretnéd, hogy a tiedet megosszam, kérlek jelezd a feladat beküldésekor! _
 
 <script type="text/p5" data-p5-version="1.0.0" data-preview-width="300" data-height="600">
 function setup() {
