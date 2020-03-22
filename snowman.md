@@ -44,7 +44,7 @@ Ha minden jól megy, egy fehér kört látsz világoszöld háttér előtt. Néz
 
 - Két "függvényt" (a programozásban ez kicsit mást jelent, mint a matekban) hoztunk létre, a **setup** és a **draw** függvényeket.
 - Amikor a play gombra kattintottál, a p5 először lefuttatja a **setup** (_telepítés_) függvényt. Ez egyetlen utasítást tartalmaz: a `createCanvas(200,200);` létrehoz egy 200 pixel szélességű és 200 pixel hosszúságú "vásznat", erre fog a program a továbbiakban rajzolni.
-- A _setup_ függvény után a **draw** függvény fut le. Itt két utasítás van:
+- A _setup_ függvény után a **draw** (_rajzolás_) függvény fut le. Itt két utasítás van:
   - Az első, a `background("lightgreen")` az egész hátteret beszínezi világoszöld színre.
   - A második utasítás egy kört rajzol a megadott paraméterek alapján. Kört a `circle(x, y, d);` paranccsal rajzolhatunk, ahol `x` és `y` a kör középpontjának koordinátái, `d` pedig a kör átmérője.
 
@@ -73,11 +73,13 @@ function draw() {
 }
 </script>
 
-{% include task.html content="Változtasd meg a fenti programot úgy, hogy magyar kokárdát rajzoljon!" %}
 A `fill` és a `background` parancsok [ezeknek a színeknek](https://www.w3schools.com/colors/colors_names.asp) a neveit tudják.
-{% include question.html content="Miért fontos, hogy pont ebben a sorrendben legyenek az utasítások? Mi történne, ha megváltoztatnánk? Próbáld ki!" %}
 
-## Rajzolj vonalat
+{% include task.html content="Változtasd meg a fenti programot úgy, hogy magyar kokárdát rajzoljon!" %}
+
+{% include question.html content="Miért fontos, hogy pont ebben a sorrendben legyenek az utasítások? Mi történne, ha megváltoztatnánk?" %}
+
+## Vonal
 
 Vonalat rajzolhatunk a `line` utasítással:
 
@@ -86,6 +88,7 @@ line(x1, y1, x2, y2);
 ```
 
 ahol x1 és y1 a kezdő-, x2 és y2 pedig a végpont koordinátái.
+
 {% include task.html content="(⭐) Fejezd be a házat az alábbi programban!" %}
 
 <script type="text/p5" data-p5-version="1.0.0" data-preview-width="200">
@@ -102,17 +105,17 @@ function draw() {
 }
 </script>
 
-# Végső megmérettetés: rajzolj hóembert!
+# Végső megmérettetés ☃️
 
 {% include homework.html content="Módosítsd az alábbi kódot úgy, hogy az egy hóembert rajzoljon. A megoldásról (kód + eredménye) készíts screenshotot, és töltsd fel a Google Classroomba! " %}
 
 A hóember:
 
-- Világos vagy sötétkék háttér
+- Világos-- vagy sötétkék háttér
 - Legalább 3, különböző nagyságú körből álljon
 - Legyen legalább egy kör más színű, mint a többiek
 - Talajon álljon (legyen alatta egy vonal)
-- Légy kreatív! ;)
+- Engedd szabadjára kreativitásod! ;)
 
 Haladj apróbb lépésekben! A kész kód eredményét minden kisebb lépés után ellenőrizd a Play gomb megnyomásával - így könnyebb időben észrevenni a hibákat. Sok sikert! ;)
 

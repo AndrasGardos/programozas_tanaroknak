@@ -1,0 +1,41 @@
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
+  <style>
+    margin: 0px;
+  </style>
+</head>
+<body>
+  <script>
+    let x = 20;
+    let y = 20;
+    let vx = 1;
+    let vy = 0;
+    const g = 0.2;
+    let k = 0.8;
+    let i = 1;
+
+    function setup() {
+      createCanvas(600, 300);
+    }
+
+    function draw() {
+      background(200, 10);
+      x += vx;
+      y += vy;
+      vy += g;
+      if (y > 280) {
+        y = 280;
+        vy = -k * vy;
+      }
+
+      if (x > 600) {
+        i = (i % 4) + 1;
+        x = 20;
+        y = 20;
+        vx = i;
+        vy = 0;
+      }
+      circle(x, y, 20);
+    }
+  </script>
+</body>
