@@ -111,7 +111,7 @@ function draw() {
 
 # Végső megmérettetés ☃️
 
-{% include homework.html content="Módosítsd az alábbi kódot úgy, hogy az egy hóembert rajzoljon. A megoldásról (kód + eredménye) készíts screenshotot, és töltsd fel a Google Classroomba! " %}
+{% include homework.html content="Módosítsd az alábbi kódot úgy, hogy az egy hóembert rajzoljon. A megoldásról (kód + eredménye) készíts képernyőfelvételt (screenshotot), és töltsd fel a Google Classroomba! " %}
 
 A hóember:
 
@@ -120,6 +120,8 @@ A hóember:
 - Legyen legalább egy kör más színű, mint a többiek
 - Talajon álljon (legyen alatta egy vonal)
 - Engedd szabadjára kreativitásod! ;)
+
+Figyelj arra, hogy a nagy és a kisbetűk ebben a nyelven nem felcserélhetők. Az egyes utasítások végére `;` kerüljön. Az sortöréseket, behúzásokat, szóközöket nem veszi figyelembe a program, ezeket az olvashatóság miatt érdemes alkalmazni.
 
 Haladj apróbb lépésekben! A kész kód eredményét minden kisebb lépés után ellenőrizd a Play gomb megnyomásával - így könnyebb időben észrevenni a hibákat. Sok sikert! ;)
 
