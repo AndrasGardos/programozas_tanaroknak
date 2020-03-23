@@ -142,9 +142,9 @@ d; // d igaz
 
 Vigyázz, a szimpla `=` jelentése javascriptben a "legyen egyenlő"!
 
-\_ 🌟 Kétféle összehasonlítás van, a `==` és a `===`.
-
-A változók nem csak számok lehetnek, hanem például karakterláncok is, például `let koszones = "Jó napot!"`. Ez nyilván nem egyenlő 2-vel. De a "2" (mint szöveg) egyenlő a 2 számmal? \_
+> 🌟 Kétféle összehasonlítás van, a `==` és a `===`.
+>
+> A változók nem csak számok lehetnek, hanem például karakterláncok is, például `let koszones = "Jó napot!"`. Ez nyilván nem egyenlő 2-vel. De a "2" (mint szöveg) egyenlő a 2 számmal? \_
 
 ```javascript
 let k = "2";
@@ -154,4 +154,4 @@ k === 2; // Nem igaz
 
 Ajánlott a `===`-et használni, hogy elkerüljünk bizonyos hibákat. Ha számokat hasonlítunk össze, ugyanazt az eredményt kapjuk.
 
-Sok sikert! A következő leckében modellezzük a szabadesést! :)
+Sok sikert! A következő leckében modellezzük a szabadesést! s:)
