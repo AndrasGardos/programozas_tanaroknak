@@ -94,7 +94,7 @@ Csodás! Feltaláltuk a teleportáló labdát. Most juttassuk vissza valami kev�
 Ha kiment a labda a jobb oldalon:
 
 - tegyük vissza a lap jobb szélére
-- majd a sebessége pedig legyen az eddigi sebesség ellentetje (mert tökéletesen rugalmasan ütközik)
+- majd a sebessége pedig legyen az eddigi sebesség **ellentetje** (mert tökéletesen rugalmasan ütközik)
   (tipp: szorozni a `*` jellel tudunk)
 
 Ha a bal oldalon ment ki, tegyük vissza a bal szélre, majd szintén változtassuk meg a sebességét az ellentettjére!
@@ -130,34 +130,41 @@ let c = 7;
 let d = true; // igaz
 let e = false; // hamis
 
-a < b; // Igaz
-a > b; // Hamis
-a != b; // Igaz, a nem-egyenlő b-vel
-a != c; // Hamis, a nem nem-egyenlő c-vel
-a == c; // Igaz, a egyenlő c-vel
-a === c; // Igaz, a egyenlő c-vel, és mindketten számok 🌟
+a < b; // a kisebb mint b : igaz
+a > b; // a nagyobb mint b : hamis
 a >= c; // Igaz, a nagyobb-vagy-egyenlő c-nél
 a <= b; // Igaz, a kisebb-vagy-egyenlő b-nél
-d; // d igaz
-e; // e hamis
+
+a == c; // a egyenlő c-vel : igaz
+a === c; //a egyenlő c-vel, és a típusuk is megegyezik (számok) : igaz (🌟)
+
+a != b; // a nem-egyenlő b-vel : igaz
+a != c; // a nem-egyenlő c-vel : hamis
+
+d; // d értéke : igaz
+e; // e értéke : hamis
 ```
 
 Vigyázz, a szimpla `=` jelentése javascriptben a "legyen egyenlő"!
 
-> 🌟 Kétféle összehasonlítás van, a `==` és a `===`.
+> 🌟 A teljesség kedvéért: Kétféle összehasonlítás van, a `==` és a `===`.
 >
 > A változók nem csak számok lehetnek, hanem például karakterláncok is, például `let koszones = "Jó napot!"`.
-> Ez nyilván nem egyenlő 2-vel. De a "2" (mint szöveg) egyenlő a 2 számmal? \_
+>
+> Ez nyilván nem egyenlő 2-vel. De a "2" (mint szöveg) egyenlő a 2 számmal?
+>
+> A `==` megpróbál összehasonlítani különböző típusú változókat is, tehát a "2" szöveget és a 2 számot azonos típusúvá alakítja és így hasonlítja össze.
+> A `===` ennél szigorúbb, ha nem azonos típusúak a változók, akkor nem egyenlőek.
 
 ```javascript
 let k = "2";
 let koszones = "Jó napot!";
 
-koszones == 2; // Hamis
-koszones === 2; // Hamis
+koszones == 2; // Hamis, a 2 szöveggé alakítva sem "Jó napot!"
+koszones === 2; // Hamis, az egyik szöveg, a másik szám
 
 k == 2; // Igaz - az egyik egy szám, a másik meg egy szöveg, de egyenlővé tehető
-k === 2; // Hamis
+k === 2; // Hamis, nem azonos a típusuk
 ```
 
 Ajánlott a `===`-et használni, hogy elkerüljünk bizonyos hibákat. Ha számokat hasonlítunk össze, ugyanazt az eredményt kapjuk.
