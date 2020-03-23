@@ -2,7 +2,7 @@
 title: Kosárlabdázzunk - I. rész
 ---
 
-Az előző leckében megtanultuk, hogyan rajzoljunk kört és vonalat. A **draw** függvény, amiben ezeket meghívtuk, nem egyszer futott le, hanem másodpercenként 60-szor. Itt az ideje, hogy ezt kihasználjuk: animáljunk egy kosárlabdát!
+Az előző leckében megtanultuk, hogyan rajzoljunk kört és vonalat. A **draw** függvény, ami ezeket az utasításokat tartalmazta, nem egyszer futott le, hanem másodpercenként 60-szor. Itt az ideje, hogy ezt kihasználjuk: animáljunk egy kosárlabdát!
 
 <iframe width="640" height="340" src="demos/bounce.html"></iframe>
 
@@ -61,14 +61,14 @@ A kör a végtelenségig fog jobbra menni, de senki sem fogja látni. Tegyük vi
 
 ```javascript
 if (feltétel) {
-  // A kacsacsőrők közé írt parancsok csak akkor fognak lefutni
+  // A kapcsos zárójelek közé írt parancsok csak akkor fognak lefutni
   // ha a feltétel (lásd a lecke végén) igaz
 }
 ```
 
-A fenti példában minden képkockánál meg kell vizsgálnunk, hogy kiment-e a kör a jobb szélen, és ha igen, akkor vissza kell tennünk az elejére:
+A fenti példában minden képkocka megrajzolásánál meg kell vizsgálnunk, hogy kiment-e a kör a rajzlap jobb szélen, és ha igen, akkor vissza kell tennünk az elejére:
 
-<script type="text/p5" data-p5-version="1.0.0" data-preview-width="200">
+<script type="text/p5" data-p5-version="1.0.0" data-preview-width="250">
 let x = 10;
 let v = 2;
 
@@ -101,7 +101,7 @@ Ha a bal oldalon ment ki, tegyük vissza a bal szélre, majd szintén változtas
 
 Ne felejtsd el, a kör középpontjának koordinátáit adtuk meg. Próbáld meg úgy megcsinálni a feladatot, hogy a labda "félig" se menjen ki a vászonról.
 
-<script type="text/p5" data-p5-version="1.0.0" data-preview-width="200">
+<script type="text/p5" data-p5-version="1.0.0" data-preview-width="350">
 let x = 10;
 let v = 2;
 
@@ -128,6 +128,7 @@ let a = 7;
 let b = 9;
 let c = 7;
 let d = true; // igaz
+let e = false; // hamis
 
 a < b; // Igaz
 a > b; // Hamis
@@ -138,18 +139,25 @@ a === c; // Igaz, a egyenlő c-vel, és mindketten számok 🌟
 a >= c; // Igaz, a nagyobb-vagy-egyenlő c-nél
 a <= b; // Igaz, a kisebb-vagy-egyenlő b-nél
 d; // d igaz
+e; // e hamis
 ```
 
 Vigyázz, a szimpla `=` jelentése javascriptben a "legyen egyenlő"!
 
 > 🌟 Kétféle összehasonlítás van, a `==` és a `===`.
 >
-> A változók nem csak számok lehetnek, hanem például karakterláncok is, például `let koszones = "Jó napot!"`. Ez nyilván nem egyenlő 2-vel. De a "2" (mint szöveg) egyenlő a 2 számmal? \_
+> A változók nem csak számok lehetnek, hanem például karakterláncok is, például `let koszones = "Jó napot!"`.
+> Ez nyilván nem egyenlő 2-vel. De a "2" (mint szöveg) egyenlő a 2 számmal? \_
 
 ```javascript
 let k = "2";
-k == 2; // Igaz
-k === 2; // Nem igaz
+let koszones = "Jó napot!";
+
+koszones == 2; // Hamis
+koszones === 2; // Hamis
+
+k == 2; // Igaz - az egyik egy szám, a másik meg egy szöveg, de egyenlővé tehető
+k === 2; // Hamis
 ```
 
 Ajánlott a `===`-et használni, hogy elkerüljünk bizonyos hibákat. Ha számokat hasonlítunk össze, ugyanazt az eredményt kapjuk.

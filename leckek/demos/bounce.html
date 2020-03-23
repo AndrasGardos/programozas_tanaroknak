@@ -8,14 +8,14 @@
   <script>
     let x = 20;
     let y = 20;
-    let vx = 1;
+    let vx = 1.5;
     let vy = 0;
-    const g = 0.2;
+    const g = 0.3;
     let k = 0.8;
     let i = 1;
 
     function setup() {
-      createCanvas(700, 300);
+      createCanvas(650, 300);
     }
 
     function draw() {
@@ -28,7 +28,7 @@
         vy = -k * vy;
       }
 
-      if (x > 600) {
+      if (x > 650) {
         i = (i % 4) + 1;
         x = 20;
         y = 20;
