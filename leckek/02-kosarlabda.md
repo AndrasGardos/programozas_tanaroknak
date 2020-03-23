@@ -121,7 +121,7 @@ function draw() {
 
 # (🌟) A "feltétel"-ekről
 
-A feltétel egy kifejezést, ami igaz, vagy hamis értéket ad. Például:
+A feltétel egy kifejezés, ami igaz, vagy hamis értéket ad. Például:
 
 ```javascript
 let a = 7;
@@ -154,4 +154,4 @@ k === 2; // Nem igaz
 
 Ajánlott a `===`-et használni, hogy elkerüljünk bizonyos hibákat. Ha számokat hasonlítunk össze, ugyanazt az eredményt kapjuk.
 
-Sok sikert! A következő leckében befejezzük a pattogó kosárlabda modelljét!:)
+Sok sikert! A következő leckében modellezzük a szabadesést! :)
