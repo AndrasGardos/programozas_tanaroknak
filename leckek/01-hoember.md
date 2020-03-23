@@ -1,5 +1,6 @@
 ---
-title: Első lecke
+title: Rajzoljunk hóembert!
+description: Programozás tanároknak - I. lecke
 ---
 
 # Miért tanuljon meg egy tanár programozni?

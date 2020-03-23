@@ -1,5 +1,5 @@
 ---
-title: Kosárlabdázzunk I.
+title: Kosárlabdázzunk - I. rész
 ---
 
 Az előző leckében megtanultuk, hogyan rajzoljunk kört és vonalat. A **draw** függvény, amiben ezeket meghívtuk, nem egyszer futott le, hanem másodpercenként 60-szor. Itt az ideje, hogy ezt kihasználjuk: animáljunk egy kosárlabdát!
@@ -62,7 +62,7 @@ A kör a végtelenségig fog jobbra menni, de senki sem fogja látni. Tegyük vi
 ```javascript
 if (feltétel) {
   // A kacsacsőrők közé írt parancsok csak akkor fognak lefutni
-  // ha a feltétel igaz
+  // ha a feltétel (lásd a lecke végén) igaz
 }
 ```
 
@@ -89,12 +89,12 @@ function draw() {
 
 Csodás! Feltaláltuk a teleportáló labdát. Most juttassuk vissza valami kevésbé sci-fi módon - tegyük fel, hogy rugalmasan ütközik a rajzlap széleivel, és tökéletesen rugalmasan visszapattan.
 
-{% include task.html content="Módosítsd a lenti kódot! A labda pattanjon vissza rugalmasan mindkét oldalon!" %}
+{% include homework.html content="Módosítsd a lenti kódot! A labda pattanjon vissza rugalmasan mindkét oldalon! A kész kódot " %}
 
 Ha kiment a labda a jobb oldalon:
 
 - tegyük vissza a lap jobb szélére
-- majd a sebessége pedig legyen az eddigi sebesség ellentetje
+- majd a sebessége pedig legyen az eddigi sebesség ellentetje (mert tökéletesen rugalmasan ütközik)
   (tipp: szorozni a `*` jellel tudunk)
 
 Ha a bal oldalon ment ki, tegyük vissza a bal szélre, majd szintén változtassuk meg a sebességét az ellentettjére!
@@ -131,6 +131,8 @@ let d = true; // igaz
 
 a < b; // Igaz
 a > b; // Hamis
+a != b; // Igaz, a nem-egyenlő b-vel
+a != c; // Hamis, a nem nem-egyenlő c-vel
 a == c; // Igaz, a egyenlő c-vel
 a === c; // Igaz, a egyenlő c-vel, és mindketten számok 🌟
 a >= c; // Igaz, a nagyobb-vagy-egyenlő c-nél
@@ -140,7 +142,7 @@ d; // d igaz
 
 Vigyázz, a szimpla `=` jelentése javascriptben a "legyen egyenlő"!
 
-\_ 🌟 A teljesség kedvéért: kétféle összehasonlítás van, a `==` és a `===`.
+\_ 🌟 Kétféle összehasonlítás van, a `==` és a `===`.
 
 A változók nem csak számok lehetnek, hanem például karakterláncok is, például `let koszones = "Jó napot!"`. Ez nyilván nem egyenlő 2-vel. De a "2" (mint szöveg) egyenlő a 2 számmal? \_
 
@@ -150,7 +152,6 @@ k == 2; // Igaz
 k === 2; // Nem igaz
 ```
 
-# Szabadesés
+Ajánlott a `===`-et használni, hogy elkerüljünk bizonyos hibákat. Ha számokat hasonlítunk össze, ugyanazt az eredményt kapjuk.
 
-szabadesés - rugalmatlanul ütközik
-e.v.e.m és a szabadesés kombinálása
+Sok sikert! A következő leckében befejezzük a pattogó kosárlabda modelljét!:)
