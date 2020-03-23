@@ -89,7 +89,7 @@ function draw() {
 
 Csodás! Feltaláltuk a teleportáló labdát. Most juttassuk vissza valami kevésbé sci-fi módon - tegyük fel, hogy rugalmasan ütközik a rajzlap széleivel, és tökéletesen rugalmasan visszapattan.
 
-{% include homework.html content="Módosítsd a lenti kódot! A labda pattanjon vissza rugalmasan mindkét oldalon! A kész kódot " %}
+{% include homework.html content="Módosítsd a lenti kódot! A labda pattanjon vissza rugalmasan mindkét oldalon! A kész kódot tölsd fel a Google Classroomba, egy új Dokumentumba." %}
 
 Ha kiment a labda a jobb oldalon:
 
@@ -154,4 +154,4 @@ k === 2; // Nem igaz
 
 Ajánlott a `===`-et használni, hogy elkerüljünk bizonyos hibákat. Ha számokat hasonlítunk össze, ugyanazt az eredményt kapjuk.
 
-Sok sikert! A következő leckében modellezzük a szabadesést! s:)
+Sok sikert! A következő leckében modellezzük a szabadesést! :)
