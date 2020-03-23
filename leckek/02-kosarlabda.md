@@ -4,7 +4,7 @@ title: Kosárlabdázzunk - I. rész
 
 Az előző leckében megtanultuk, hogyan rajzoljunk kört és vonalat. A **draw** függvény, amiben ezeket meghívtuk, nem egyszer futott le, hanem másodpercenként 60-szor. Itt az ideje, hogy ezt kihasználjuk: animáljunk egy kosárlabdát!
 
-<iframe width="620" height="320" src="demos/bounce.html"></iframe>
+<iframe width="640" height="340" src="demos/bounce.html"></iframe>
 
 De előbb kezdjünk valami egyszerűbbel, mindenki kedvenc egyenes vonalú egyenletes mozgásával.
 
