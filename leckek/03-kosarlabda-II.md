@@ -29,7 +29,7 @@ function draw() {
   fill("DarkSlateGray");
   rect(0,350,200,50);
 
-  // Növeljük meg a labda sebességét
+  // Növeljük meg a labda sebességét g-vel
   
   // Változtassuk meg a pozicióját a sebesség alapján
   
