@@ -44,6 +44,8 @@ function draw() {
 
 </script>
 
+> A `rect(x,y,szélesség, magasság)` paranccsal téglalapot rajzolhatunk (föld). Az x és az y itt a téglalap bal-felső sarkát adja meg.
+
 Az energiamegmaradás miatt láthatjuk, hogy a labda sohasem fog magasabbra pattanni, mint ahol leejtettük. A g értékét változtatva megnézhetjük, hogyan viselkedne a labda kisebb és nagyobb gravitáció esetén.
 
 Ha a `vy` értékét kezdetben nem 0-ra állítjuk, akkor függőleges felfelé vagy lefelé hajítást fogunk kapni.
