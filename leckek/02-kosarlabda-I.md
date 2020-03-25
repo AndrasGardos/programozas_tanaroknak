@@ -4,7 +4,7 @@ title: Kosárlabdázzunk - I. rész
 
 Az előző leckében megtanultuk, hogyan rajzoljunk kört és vonalat. A **draw** függvény, ami ezeket az utasításokat tartalmazta, nem egyszer futott le, hanem másodpercenként 60-szor. Itt az ideje, hogy ezt kihasználjuk: animáljunk egy kosárlabdát!
 
-<iframe width="640" height="340" src="demos/bounce.html"></iframe>
+<iframe width="680" height="340" src="demos/bounce.html"></iframe>
 
 De előbb kezdjünk valami egyszerűbbel, mindenki kedvenc egyenes vonalú egyenletes mozgásával.
 
@@ -35,7 +35,7 @@ function draw() {
 
 Ez a program ugyanazt az eredményt fogja adni, mintha a `circle(100,100,d)` helyére `circle(100,100,50)`-et írtunk volna. A változóknak bármilyen nevet adhatunk, törekedjünk a minél egyértelműbb elnevezésekre. Ez bonyolultabb, hosszabb programok esetében lesz nagyon fontos.
 
-Egyenes vonalú mozgás esetén minden képkockánál egy kicsit mozdítsuk el a testet:
+Egyenes vonalú mozgás esetén minden képkocka megrajzolásánál egy kicsit növeljük meg az x értékét, így mindig egy kicsit arrébb rajzolva a kört:
 
 <script type="text/p5" data-p5-version="1.0.0" data-preview-width="200">
 let x = 10;
@@ -53,6 +53,8 @@ function draw() {
 
 A _play_ gomb megnyomásával újraindíthatjuk az animációt.
 
+Az `x` változóra és értékére minden rajzolásnál szükségünk lesz, ezért fontos, hogy a funkciókon kívül hozzuk létre (így globálisan érvényes lesz).
+
 {% include task.html content="Módosítsd a fenti kódot! Hozz létre egy v változót. Az x-et minden képkockánál növeld meg a v értékével. A v értéke legyen 2." %}
 
 A kódunkba megjegyzéseket is tehetünk: minden sorban `//` utáni részt a program nem fogja figyelembe venni
@@ -68,7 +70,7 @@ if (feltétel) {
 
 A fenti példában minden képkocka megrajzolásánál meg kell vizsgálnunk, hogy kiment-e a kör a rajzlap jobb szélen, és ha igen, akkor vissza kell tennünk az elejére:
 
-<script type="text/p5" data-p5-version="1.0.0" data-preview-width="250">
+<script type="text/p5" data-p5-version="1.0.0" data-preview-width="250" data-height="400">
 let x = 10;
 let v = 2;
 
@@ -89,19 +91,18 @@ function draw() {
 
 Csodás! Feltaláltuk a teleportáló labdát. Most juttassuk vissza valami kevésbé sci-fi módon - tegyük fel, hogy rugalmasan ütközik a rajzlap széleivel, és tökéletesen rugalmasan visszapattan.
 
-{% include homework.html content="Módosítsd a lenti kódot! A labda pattanjon vissza rugalmasan mindkét oldalon! A kész kódot tölsd fel a Google Classroomba, egy új Dokumentumba." %}
+{% include homework.html content="Módosítsd a lenti kódot! A labda pattanjon vissza rugalmasan mindkét oldalon! A kész <b>kódot</b> (ne képernyőfotót!) tölsd fel a Google Classroomba, egy új Dokumentumba." %}
 
 Ha kiment a labda a jobb oldalon:
 
 - tegyük vissza a lap jobb szélére
-- majd a sebessége pedig legyen az eddigi sebesség **ellentetje** (mert tökéletesen rugalmasan ütközik)
-  (tipp: szorozni a `*` jellel tudunk)
+- majd a sebessége pedig legyen az eddigi sebesség **ellentetje** (tipp: szorozni a `*` jellel tudunk. mekkora sebességgel menjen egy kör jobbra, ahhoz, hogy balra menjen?)
 
 Ha a bal oldalon ment ki, tegyük vissza a bal szélre, majd szintén változtassuk meg a sebességét az ellentettjére!
 
 Ne felejtsd el, a kör középpontjának koordinátáit adtuk meg. Próbáld meg úgy megcsinálni a feladatot, hogy a labda "félig" se menjen ki a vászonról.
 
-<script type="text/p5" data-p5-version="1.0.0" data-preview-width="350">
+<script type="text/p5" data-p5-version="1.0.0" data-preview-width="250" data-height="650">
 let x = 10;
 let v = 2;
 
@@ -119,7 +120,7 @@ function draw() {
 }
 </script>
 
-# (🌟) A "feltétel"-ekről
+# A "feltétel"-ekről
 
 A feltétel egy kifejezés, ami igaz, vagy hamis értéket ad. Például:
 
@@ -147,26 +148,29 @@ e; // e értéke : hamis
 
 Vigyázz, a szimpla `=` jelentése javascriptben a "legyen egyenlő"!
 
-> 🌟 A teljesség kedvéért: Kétféle összehasonlítás van, a `==` és a `===`.
+> 🌟 A teljesség kedvéért
 >
-> A változók nem csak számok lehetnek, hanem például karakterláncok is, például `let koszones = "Jó napot!"`.
+> Kétféle összehasonlítás van, a `==` és a `===`. Nagy jelentősége egyelőre nincs a kettő közötti különbségnek számunkra, de azért néhány szót ejtsünk róla. Szóval, ez a rész az olvasmány :)
+>
+> **A változók nem csak számok lehetnek, hanem például karakterláncok is, például `let koszones = "Jó napot!"`.**
 >
 > Ez nyilván nem egyenlő 2-vel. De a "2" (mint szöveg) egyenlő a 2 számmal?
 >
 > A `==` megpróbál összehasonlítani különböző típusú változókat is, tehát a "2" szöveget és a 2 számot azonos típusúvá alakítja és így hasonlítja össze.
+>
 > A `===` ennél szigorúbb, ha nem azonos típusúak a változók, akkor nem egyenlőek.
-
-```javascript
-let k = "2";
-let koszones = "Jó napot!";
-
-koszones == 2; // Hamis, a 2 szöveggé alakítva sem "Jó napot!"
-koszones === 2; // Hamis, az egyik szöveg, a másik szám
-
-k == 2; // Igaz - az egyik egy szám, a másik meg egy szöveg, de egyenlővé tehető
-k === 2; // Hamis, nem azonos a típusuk
-```
-
-Ajánlott a `===`-et használni, hogy elkerüljünk bizonyos hibákat. Ha számokat hasonlítunk össze, ugyanazt az eredményt kapjuk.
+>
+> ```javascript
+> let k = "2";
+> let koszones = "Jó napot!";
+>
+> koszones == 2; // Hamis, a 2 szöveggé alakítva sem "Jó napot!"
+> koszones === 2; // Hamis, az egyik szöveg, a másik szám
+>
+> k == 2; // Igaz - az egyik egy szám, a másik meg egy szöveg, de egyenlővé tehető
+> k === 2; // Hamis, nem azonos a típusuk
+> ```
+>
+> Ajánlott a `===`-et használni, hogy elkerüljünk bizonyos hibákat. Ha számokat hasonlítunk össze, ugyanazt az eredményt kapjuk.
 
 Sok sikert! A következő leckében modellezzük a szabadesést! :)
