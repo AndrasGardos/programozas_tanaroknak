@@ -8,7 +8,7 @@ Az előző leckében a **tökéletesen rugalmas** ütközést modelleztük - a l
 
 # Pattogó labda
 
-> _Először szimuláljuk azt, hogy ha egy kosárlabdát egyszerűen elengedünk egy bizonyos magasságban. A sebessége az elengedés pillanatában nulla, de folyamatosan növekszik, míg el nem éri a földet. Ekkor a sebesség iránya megfordul, a nagysága kicsit kevesebb lesz, visszapattan, (de nem olyan magasra, mint ahol elengedtük). Majd egyre kisebb magasságokba emelkedik fel, a pattogások során energiát veszít._
+> _Először szimuláljuk azt az esetet, hogy ha egy kosárlabdát egyszerűen elengedünk egy bizonyos magasságban. A sebessége az elengedés pillanatában nulla, de folyamatosan növekszik, míg el nem éri a földet. Ekkor a sebesség iránya megfordul, a nagysága kicsit kevesebb lesz, visszapattan, (de nem olyan magasra, mint ahol elengedtük). Majd egyre kisebb magasságokba emelkedik fel, a pattogások során energiát veszít._
 
 Minden képkocka megrajzolásakor meg kell növelnünk a labda függőleges sebességét a nehézségi gyorsulásnak megfelelően, hiszen a szabadon eső testek sebessége folyamatosan növekszik.
 
