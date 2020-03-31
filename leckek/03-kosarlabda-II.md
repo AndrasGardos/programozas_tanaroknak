@@ -8,7 +8,7 @@ Az előző leckében a **tökéletesen rugalmas** ütközést modelleztük - a l
 
 # Pattogó labda
 
-Tegyük fel, hogy minden ütközéskor a sebessége 80%-a lesz az eredeti sebességének. Tehát 10 pixel lefelé a sebessége --> ütközés --> 8 pixel felfelé.
+> _Először szimuláljuk azt, hogy ha egy kosárlabdát egyszerűen elengedünk egy bizonyos magasságban. A sebessége az elengedés pillanatában nulla, de folyamatosan növekszik, míg el nem éri a földet. Ekkor a sebesség iránya megfordul, a nagysága kicsit kevesebb lesz, visszapattan, (de nem olyan magasra, mint ahol elengedtük). Majd egyre kisebb magasságokba emelkedik fel, a pattogások során energiát veszít._
 
 Minden képkocka megrajzolásakor meg kell növelnünk a labda függőleges sebességét a nehézségi gyorsulásnak megfelelően, hiszen a szabadon eső testek sebessége folyamatosan növekszik.
 
@@ -16,11 +16,13 @@ Minden képkocka megrajzolásakor meg kell növelnünk a labda függőleges sebe
 
 Ha a labda a föld szintjén (y = 350) vagy az alatt van, akkor a függőleges sebessége (`vy`) változzon meg.
 
+Tegyük fel, hogy minden ütközéskor a sebessége 80%-a lesz az eredeti sebességének. Tehát például 10 pixel lefelé a sebessége --> ütközés --> 8 pixel felfelé. Emlékeztetőül: a pozitív `vy` azt jelenti, hogy a labda lefelé, a negatív pedig azt, hogy felfelé mozog.
+
 A visszapattanáskor a függőleges sebesség ellenkező előjelű legyen, és az abszolútértéke az eddigi `vy` 80%-a (ehhez meg kell szoroznunk az eddigi értéket egy negatív számmal). Tegyük vissza a földre a visszapattanáskor (ha esetleg a föld alá ment volna): az `y` értékét is változtassuk meg a talaj helyzetének megfelelően.
 
 {% include task.html content="Fejezd be a lenti kódot! A labda szabadon essen lefelé, majd a Földre érve pattanjon vissza, kisebb sebességgel. " %}
 
-Haladj kisebb lépésekben! A kommentek és az előző lecke sokat segítenek ;)
+Haladj kisebb lépésekben! _A kommentek és az előző lecke sokat segítenek ;)_
 
 <script type="text/p5" data-p5-version="1.0.0" data-preview-width="250" data-height="750">
 
@@ -60,9 +62,11 @@ Az energiamegmaradás miatt láthatjuk, hogy a labda sohasem fog magasabbra patt
 
 Ha a `vy` értékét kezdetben nem 0-ra állítjuk, akkor függőleges felfelé vagy lefelé hajítást fogunk kapni.
 
-🌟 Igazán elegáns megoldás az, ha minél kevesebb konkrét számot írunk a kódunkba. Ha működik a programod, próbáld meg úgy módosítani, hogy az ütközéskor bekövetkező sebességveszteség is egy, a kód tetején, könnyen megváltoztatható változó legyen.
+> 🌟 Igazán elegáns megoldás az, ha minél kevesebb konkrét számot írunk a kódunkba. Ha működik a programod, próbáld meg úgy módosítani, hogy az ütközéskor bekövetkező sebességveszteség is egy, a kód tetején, könnyen megváltoztatható változó legyen.
 
 # Vízszintes hajítás
+
+> _A vízszintes hajítás abban különbözik a szabadeséstől, hogy a labdát nem csak elengedjük, hanem valamilyen sebességgel a talajjal párhuzamosan eldobjuk._
 
 Az előző leckében bemutatott animációban egy vízszintes hajítás volt:
 
@@ -104,7 +108,7 @@ function draw() {
 
   // Növeljük meg a labda y irányú sebességét (vy) a gravitáció miatt:
   
-  // Változtassuk meg az x és y pozicióját
+  // Változtassuk meg az x és y pozícióját
   // a vx és a vy alapján:
   
 
