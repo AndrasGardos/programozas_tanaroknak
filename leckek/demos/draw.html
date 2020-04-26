@@ -1,0 +1,37 @@
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
+  <style>
+    margin: 0px;
+  </style>
+</head>
+<body>
+  <script>
+    function setup() {
+      createCanvas(500, 500);
+      background("black");
+      textAlign(CENTER, BOTTOM);
+      fill("lightgray");
+      text("Kattints a rajzoláshoz!", 250, 500);
+      strokeWeight(2);
+    }
+
+    function draw() {
+      if (mouseIsPressed) {
+        stroke("yellow");
+        line(pmouseX, pmouseY, mouseX, mouseY);
+        stroke("red");
+        line(width - pmouseX, pmouseY, width - mouseX, mouseY);
+        stroke("green");
+        line(pmouseX, height - pmouseY, mouseX, height - mouseY);
+        stroke("blue");
+
+        line(
+          width - pmouseX,
+          height - pmouseY,
+          width - mouseX,
+          height - mouseY
+        );
+      }
+    }
+  </script>
+</body>
