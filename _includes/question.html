@@ -1,4 +1,8 @@
 <div markdown="span" class="alert alert-secondary" role="alert">
   <font size="12">🤔</font>
-  {{ include.content }}
+  {{ include.content }} {% if include.ans %}
+
+  <a href="#" onclick="alert('{{ include.ans | escape }}');">Megoldás</a>
+
+  {% endif%}
 </div>
