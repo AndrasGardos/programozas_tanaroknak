@@ -1,10 +1,10 @@
 ---
-title: Egér
+title: Interaktivitás - Egér
 ---
 
-Itt az ideje, hogy interaktívabbá tegyük a programjainkat! Ebben a leckében az egérrel foglalkozunk.
+Itt az ideje, hogy interaktívabbá tegyük a programjainkat! Ebben a leckében az egérrel foglalkozunk, egy rajzprogramot fogunk készíteni.
 
-# Az egér poziciója
+# Az egér pozíciója
 
 Három különleges változót használhatunk : a `mouseX` és a `mouseY` a változók megadják az egérmutató aktuális koordinátáit. A `mouseIsPressed` változó pedig igaz (`true`) ha az egér bal gombja éppen le van nyomva, egyébként hamis(`false`)
 
@@ -63,7 +63,7 @@ if (tegezodunk) {
 }
 ```
 
-{% include task.html content="Hogyan fogunk köszönni a fenti esetben és miért?" %}
+{% include question.html content="Hogyan fogunk köszönni a fenti esetben és miért?" ans="Jó napottal. A tegezodunk hamis, ezért tovább megyünk, és megnézzük, hogy az ido < 11? Ez sem igaz, továbbmegyünk és megnézzük, hogy ido>18? És ez is hamis, tehát továbbmegyünk az egyébként részre és Jó napottal köszönünk." %}
 
 Megváltoztathatjuk például a háttér színét az alapján, hogy éppen hol van az egér:
 
@@ -87,7 +87,7 @@ function draw(){
 }
 </script>
 
-Melyik részre kell vinnünk az egeret, hogy kék legyen a háttér? Miért?
+{% include question.html content="Melyik részre kell vinnünk az egeret, hogy kék legyen a háttér? Miért?" ans="A jobb felső negyedébe, mert így se az első if, sem az else if-nél vizsgált feltétel nem lesz igaz, így a harmadik ág(else) fog lefutni." %}
 
 # Rajzoljunk egérrel
 
@@ -115,22 +115,41 @@ Folytonos vonalhoz össze kell kötnünk azt a helyet, ahol az előző rajzolás
 line(mouseX, mouseY, pmouseX, pmouseY);
 ```
 
+Persze csak akkor, ha az egér éppen le van nyomva, ezt a `mouseIsPressed` segítségével ellenőrizhetjük.
+
 ## Kreatív rajzolás
 
 Csinálj egy rajzoló programot, ahol az egér lenyomásával folytonos vonalat húzhatunk.
 
-A programozásban talán azt szeretem legjobban, hogy az ember megvalósíthatja a kreatív ötleteit. Ez a feladat most kicsit kevésbé konkrét lesz mint az eddigiek.
+A programozásban talán azt szeretem legjobban, hogy az ember megvalósíthatja a kreatív ötleteit. Tehát adnék egy "szorgalmi" feladatot: Legyen benne valami egyéni ötlet, amitől ez a rajzprogram különleges lesz.
 
-Tehát adnék egy "szorgalmi" feladatot: Legyen benne valami egyéni ötlet, amitől ez a rajzprogram különleges lesz. Minden eddigi anyag parancs, lecke használható, illetve a [dokumentációból](https://p5js.org/reference/) is lehet inspirálódni.
+Minden eddigi anyag parancs, lecke használható, illetve a [dokumentációból](https://p5js.org/reference/) is lehet inspirálódni. Hasznos lehet például a [random](https://p5js.org/reference/#/p5/random) parancs.
 
-Például valami ilyesmire gondoltam (ez az eddig tanultak alapján megvalósítható). Mozgasd az egeret és kattints a rajzoláshoz.
+Például valami ilyesmire gondoltam (ez az eddig tanultak alapján megvalósítható!). Mozgasd az egeret és kattints a rajzoláshoz.
 
 <iframe src="demos/draw.html" width="520" height="520"></iframe>
 
-A szerkesztéshez használhatjátok a [p5.js Web Editort](https://editor.p5js.org/).
+> A kódoláshoz használhatod a [p5.js Web Editort](https://editor.p5js.org/).
+>
+> Nem szükséges regisztrálni a használatához. De ha regisztálsz (ingyenes), akkor ott is el tudod menteni amit alkottál (File / Save parancs), illetve a mentés után le tudod tölteni, vagy létrehozhatsz egy megosztható linket a (File / Share) paranccsal.
+>
+> Az Auto-refresh-t bepipálva a programotok minden módosításkor újraindul, ez hasznos lehet.
 
-Nem szükséges regisztrálni a használatához. De ha regisztálsz (ingyenes), akkor ott is el tudod menteni amit alkottál (File / Save parancs), illetve a mentés után le tudod tölteni, vagy létrehozhatsz egy megosztható linket a (File / Share) paranccsal.
+Haladj kis lépésekben, és ha lehet, megjegyzéseket is írj bele (`//`). A legkreatívabb megoldásokat megosztom majd a csoportban! :) Sok sikert!!!
 
-Az Auto-refresh-t bepipálva a programotok minden módosításkor újraindul, ez hasznos lehet.
+{% include homework.html content="A kreatív rajzprogram kódját küldd el a Google Classroomban!" %}
 
-{% include homework.html content="A kreatív rajzprogramot küldd el a Google Classroomban!" %}
+---
+
+Ha nagyon nem szeretnéd a [p5.js Web Editort](https://editor.p5js.org/) használni (érdemes), itt is dolgozhatsz:
+
+<script type="text/p5" data-p5-version="1.0.0" data-preview-width="400" data-height="800">
+function setup(){
+  createCanvas(400,400);
+  background("gray");
+}
+function draw(){
+  // Sok sikert!
+  circle(mouseX, mouseY, 5);
+}
+</script>
